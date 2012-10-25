@@ -51,19 +51,19 @@ PHPコードは「<?php ?>」または短縮記述の「<?= ?>」を使用しな
 
 ```php
 <?php
-// side effect: change ini settings
+// 副作用: iniの設定を変更しています
 ini_set('error_reporting', E_ALL);
 
-// side effect: loads a file
+// 副作用: ファイルを読み込んでいます
 include "file.php";
 
-// side effect: generates output
+// 副作用: 出力を生成しています
 echo "<html>\n";
 
-// declaration
+// 宣言
 function foo()
 {
-    // function body
+    // 関数本体
 }
 ```
 
@@ -72,17 +72,17 @@ function foo()
 
 ```php
 <?php
-// declaration
+// 宣言
 function foo()
 {
-    // function body
+    // 関数本体
 }
 
-// conditional declaration is *not* a side effect
+// 条件付きの宣言は副作用では*ありません*
 if (! function_exists('bar')) {
     function bar()
     {
-        // function body
+        // 関数本体
     }
 }
 ```
@@ -103,7 +103,7 @@ PHP 5.3以降では、正しい名前空間を使用しなければなりませ�
 
 ```php
 <?php
-// PHP 5.3 and later:
+// PHP 5.3 以降:
 namespace Vendor\Model;
 
 class Foo
@@ -115,7 +115,7 @@ PHP 5.2以前では、クラス名に「Vendor_」接頭辞を使用し、擬似
 
 ```php
 <?php
-// PHP 5.2.x and earlier:
+// PHP 5.2.x 以前:
 class Vendor_Model_Foo
 {
 }
