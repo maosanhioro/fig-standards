@@ -1,0 +1,224 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    background-color: white;
+    margin: 10px 13px 10px 13px;
+}
+table {
+	margin: 10px 0 15px 0;
+	border-collapse: collapse;
+}
+td,th {	
+	border: 1px solid #ddd;
+	padding: 3px 10px;
+}
+th {
+	padding: 5px 10px;	
+}
+
+a {
+    color: #0069d6;
+}
+a:hover {
+    color: #0050a3;
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 9px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #404040;
+    line-height: 36px;
+}
+h1 {
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 13px;
+}
+hr {
+    margin: 0 0 19px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+blockquote {
+    padding: 13px 13px 21px 15px;
+    margin-bottom: 18px;
+    font-family:georgia,serif;
+    font-style: italic;
+}
+blockquote:before {
+    content:"\201C";
+    font-size:40px;
+    margin-left:-10px;
+    font-family:georgia,serif;
+    color:#eee;
+}
+blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+code {
+    background-color: #fee9cc;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre code {
+    background-color: #fff;
+    color:#737373;
+    font-size: 11px;
+    padding: 0;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:10px auto;
+    }
+}
+@media print {
+	body,code,pre code,h1,h2,h3,h4,h5,h6 {
+		color: black;
+	}
+	table, pre {
+		page-break-inside: avoid;
+	}
+}
+</style>
+<title>以下、オートローダー連携のための要件を説明します。
+
+必須要件
+---------
+
+* 完全</title>
+
+</head>
+<body>
+<p>以下、オートローダー連携のための要件を説明します。</p>
+
+<h2>必須要件</h2>
+
+<ul>
+<li>完全な名前空間とクラス名のために下記構造としてください。<code>\&lt;ベンダー名&gt;\(&lt;名前空間&gt;\)*&lt;クラス名&gt;</code></li>
+<li>いずれの名前空間もトップレベルの名前空間である「ベンダー名」を持つ必要があります。</li>
+<li>名前空間は複数の自由な名前空間を持つことができます。</li>
+<li>名前空間の区切りは読み込まれる際に、「directory_separator」に変換されます。</li>
+<li>クラス名に含まれるアンダースコア「_」は、「directory_separator」に変換されます。アンダースコアは特別な意味を持ちません。</li>
+<li>名前空間とクラス名に「.php」をつけて完全なファイルとなり読み込まれます。</li>
+<li>ベンダー名、名前空間及びクラス名のアルファベット文字列における小文字・大文字の組み合わせは自由です。</li>
+</ul>
+
+
+<h2>例</h2>
+
+<ul>
+<li><code>\Doctrine\Common\IsolatedClassLoader</code> => <code>/path/to/project/lib/vendor/Doctrine/Common/IsolatedClassLoader.php</code></li>
+<li><code>\Symfony\Core\Request</code> => <code>/path/to/project/lib/vendor/Symfony/Core/Request.php</code></li>
+<li><code>\Zend\Acl</code> => <code>/path/to/project/lib/vendor/Zend/Acl.php</code></li>
+<li><code>\Zend\Mail\Message</code> => <code>/path/to/project/lib/vendor/Zend/Mail/Message.php</code></li>
+</ul>
+
+
+<h2>名前空間及びクラス名におけるアンダースコアの扱い</h2>
+
+<ul>
+<li><code>\namespace\package\Class_Name</code> => <code>/path/to/project/lib/vendor/namespace/package/Class/Name.php</code></li>
+<li><code>\namespace\package_name\Class_Name</code> => <code>/path/to/project/lib/vendor/namespace/package_name/Class/Name.php</code></li>
+</ul>
+
+
+<p>ここでは余計な混乱を防ぐための最低限のオートローダー連携基準を示します。
+下記のPHP 5.3上におけるSplClassLoader実装例により、これらの基準を確認することができます。</p>
+
+<h2>実装例</h2>
+
+<p>以下は、上記基準に従ったクラスのオートロードにおける振る舞いを確認するための例です。</p>
+
+<pre><code>&lt;?php
+
+function autoload($className)
+{
+    $className = ltrim($className, '\\');
+    $fileName  = '';
+    $namespace = '';
+    if ($lastNsPos = strripos($className, '\\')) {
+        $namespace = substr($className, 0, $lastNsPos);
+        $className = substr($className, $lastNsPos + 1);
+        $fileName  = str_replace('\\', DIRECTORY_SEPARATOR, $namespace) . DIRECTORY_SEPARATOR;
+    }
+    $fileName .= str_replace('_', DIRECTORY_SEPARATOR, $className) . '.php';
+
+    require $fileName;
+}
+</code></pre>
+
+<h2>SplClassLoader実装について</h2>
+
+<p>以下のgistで、上記のオートローダー互換運用を満たした上で実装クラスがロードされるというSplClassLoaderの簡単な実装例を示します。
+基準を満たしたうえで、PHP 5.3クラスをロードするための推奨方法となります。</p>
+
+<ul>
+<li><a href="http://gist.github.com/221634">http://gist.github.com/221634</a></li>
+</ul>
+
+</body>
+</html>
