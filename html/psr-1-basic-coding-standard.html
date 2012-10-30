@@ -16,7 +16,7 @@ blockquote {
     padding: 0;
 }
 body {
-    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-family: "ＭＳ Ｐゴシック",  "MS PGothic",  "ヒラギノ角ゴ Pro W3",  "Hiragino Kaku Gothic Pro", "メイリオ",  "Meiryo",  verdana,   "Osaka",   Sans-Serif;
     font-size: 13px;
     line-height: 18px;
     color: #737373;
@@ -24,15 +24,15 @@ body {
     margin: 10px 13px 10px 13px;
 }
 table {
-	margin: 10px 0 15px 0;
-	border-collapse: collapse;
+  margin: 10px 0 15px 0;
+  border-collapse: collapse;
 }
-td,th {	
-	border: 1px solid #ddd;
-	padding: 3px 10px;
+td,th {
+  border: 1px solid #ddd;
+  padding: 3px 10px;
 }
 th {
-	padding: 5px 10px;	
+  padding: 5px 10px;
 }
 
 a {
@@ -136,15 +136,15 @@ pre code {
     }
 }
 @media print {
-	body,code,pre code,h1,h2,h3,h4,h5,h6 {
-		color: black;
-	}
-	table, pre {
-		page-break-inside: avoid;
-	}
+  body,code,pre code,h1,h2,h3,h4,h5,h6 {
+    color: black;
+  }
+  table, pre {
+    page-break-inside: avoid;
+  }
 }
 </style>
-<title>2.1. PHPタグ</title>
+<title>PSR-1（日本語）</title>
 
 </head>
 <body>
@@ -189,36 +189,36 @@ pre code {
 <p>以下は、定義と副作用両方が実装された例です。</p>
 
 <pre><code>&lt;?php
-// side effect: change ini settings
+// 副作用: iniの設定を変更しています
 ini_set('error_reporting', E_ALL);
 
-// side effect: loads a file
+// 副作用: ファイルを読み込んでいます
 include "file.php";
 
-// side effect: generates output
+// 副作用: 出力を生成しています
 echo "&lt;html&gt;\n";
 
-// declaration
+// 宣言
 function foo()
 {
-    // function body
+    // 関数本体
 }
 </code></pre>
 
 <p>以下は、副作用が存在しない実装例です。</p>
 
 <pre><code>&lt;?php
-// declaration
+// 宣言
 function foo()
 {
-    // function body
+    // 関数本体
 }
 
-// conditional declaration is *not* a side effect
+// 条件付きの宣言は副作用では*ありません*
 if (! function_exists('bar')) {
     function bar()
     {
-        // function body
+        // 関数本体
     }
 }
 </code></pre>
@@ -236,7 +236,7 @@ if (! function_exists('bar')) {
 <p>例:</p>
 
 <pre><code>&lt;?php
-// PHP 5.3 and later:
+// PHP 5.3 以降:
 namespace Vendor\Model;
 
 class Foo
@@ -247,7 +247,7 @@ class Foo
 <p>PHP 5.2以前では、クラス名に「Vendor_」接頭辞を使用し、擬似名前空間とする必要があります。</p>
 
 <pre><code>&lt;?php
-// PHP 5.2.x and earlier:
+// PHP 5.2.x 以前:
 class Vendor_Model_Foo
 {
 }

@@ -16,7 +16,7 @@ blockquote {
     padding: 0;
 }
 body {
-    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-family: "ＭＳ Ｐゴシック",  "MS PGothic",  "ヒラギノ角ゴ Pro W3",  "Hiragino Kaku Gothic Pro", "メイリオ",  "Meiryo",  verdana,   "Osaka",   Sans-Serif;
     font-size: 13px;
     line-height: 18px;
     color: #737373;
@@ -24,15 +24,15 @@ body {
     margin: 10px 13px 10px 13px;
 }
 table {
-	margin: 10px 0 15px 0;
-	border-collapse: collapse;
+  margin: 10px 0 15px 0;
+  border-collapse: collapse;
 }
-td,th {	
-	border: 1px solid #ddd;
-	padding: 3px 10px;
+td,th {
+  border: 1px solid #ddd;
+  padding: 3px 10px;
 }
 th {
-	padding: 5px 10px;	
+  padding: 5px 10px;
 }
 
 a {
@@ -136,15 +136,15 @@ pre code {
     }
 }
 @media print {
-	body,code,pre code,h1,h2,h3,h4,h5,h6 {
-		color: black;
-	}
-	table, pre {
-		page-break-inside: avoid;
-	}
+  body,code,pre code,h1,h2,h3,h4,h5,h6 {
+    color: black;
+  }
+  table, pre {
+    page-break-inside: avoid;
+  }
 }
 </style>
-<title>1.1. 例</title>
+<title>PSR-2（日本語）</title>
 
 </head>
 <body>
@@ -170,8 +170,8 @@ pre code {
 <li><p>名前空間定義のあとには空行を挟まなければいけません。またuse定義ブロックのあとにも同様に空行を挟まなければなりません。</p></li>
 <li><p>クラスの開き括弧は次の行に記述しなければなりません。また閉じ括弧は本文最後の次の行に記述しなければなりません。</p></li>
 <li><p>メソッドの開き括弧は次の行に記述しなければなりません。また閉じ括弧は本文最後の次の行に記述しなければなりません。</p></li>
-<li><p>アクセス修飾子は、全てのプロパティ、メソッドに定義しなければなりません。またabstractやfinalはアクセス修飾子の前に定義し、staticはアクセス修飾子の後に定義しなければなりません。</p></li>
-<li><p>制御構造の開始時は、その後に１スペースを開けなければなりません。またメソッドや関数の呼び出しを行ってはいけません。</p></li>
+<li><p>アクセス修飾子は、全てのプロパティ、メソッドに定義しなければなりません。またabstractとfinalはアクセス修飾子の前に定義し、staticはアクセス修飾子の後に定義しなければなりません。</p></li>
+<li><p>制御構造の開始時は、その後に１スペースを開けなければなりません。メソッドや関数の呼び出しはスペースを開けてはいけません。</p></li>
 <li><p>制御構造の開き括弧は同じ行に記述しなければなりません。また閉じ括弧は本文最後の次の行に記述しなければなりません。</p></li>
 <li><p>制御構造の開始前にスペースがあってはいけません。また閉じる際もその前にスペースがあってはいけません。</p></li>
 </ul>
@@ -203,12 +203,12 @@ class Foo extends Bar implements FooInterface
 
     final public static function bar()
     {
-        // method body
+        // メソッド本文
     }
 }
 </code></pre>
 
-<h2>2. 全体</h2>
+<h2>2. 一般</h2>
 
 <h3>2.1 標準的なコーディング規約</h3>
 
@@ -220,22 +220,22 @@ class Foo extends Bar implements FooInterface
 
 <p>全てのPHPファイルは、最後に空行を入れなければなりません。</p>
 
-<p>PHPだけでなるファイルについては、終了タグ「?>」を省略しなければなりません。</p>
+<p>PHPだけが書かれたファイルについては、終了タグ「?>」を省略しなければなりません。</p>
 
 <h3>2.3. 行</h3>
 
 <p>行の長さに対してハードリミットがあってはいけません。</p>
 
-<p>ソフトリミットは１２０文字を上限とします。
-例えば自動スタイルチェッカーで警告すべきです。</p>
+<p>行の長さのソフトリミットは１２０文字を上限とします。
+自動スタイルチェッカーはソフトリミットで警告しなければなりませんが、エラーを出してはいけません。</p>
 
-<p>１行あたりの文字数が８０文字を超えるべきではありません。超えてしまう場合は改行し分割する必要があります。</p>
+<p>１行あたりの文字数が８０文字を超えるべきではありません。超えてしまう場合は８０文字以内の複数の行に分割するべきです。</p>
 
-<p>最終行に空白文字列を続けてはいけません。</p>
+<p>行末に空白文字列を含んではいけません。</p>
 
-<p>空行は読みやすさを考慮して適切に加えて構いません。</p>
+<p>空行は読みやすさや関連するコードのまとまりを示すために適切に加えて構いません。</p>
 
-<p>１行あたりに複数ステートメントがあってはいけません。</p>
+<p>１行に複数のステートメントがあってはいけません。</p>
 
 <h3>2.4. インデント</h3>
 
@@ -246,7 +246,7 @@ class Foo extends Bar implements FooInterface
 
 <h3>2.5. 予約語とTrue/False/Null</h3>
 
-<p>PHPの[予約後][]は小文字で使用しなければなりません。</p>
+<p>PHPの<a href="http://www.php.net/manual/ja/reserved.keywords.php">予約語</a>は小文字で使用しなければなりません。</p>
 
 <p>PHP定数であるtrue、falseそしてnullは小文字でなければなりません。</p>
 
@@ -272,11 +272,11 @@ use OtherVendor\OtherPackage\BazClass;
 // ... additional PHP code ...
 </code></pre>
 
-<h2>4. クラス、プロパティ及びメソッドについて</h2>
+<h2>4. クラス、プロパティ及びメソッド</h2>
 
 <p>ここでのクラスは、全ての一般クラス、インターフェイス、traitを含みます。</p>
 
-<h3>4.1. Extends and Implements</h3>
+<h3>4.1. ExtendsとImplements</h3>
 
 <p>extendsとimplementsは、クラス名と同じ行で定義されなけれなりません。</p>
 
@@ -341,7 +341,7 @@ class ClassName
 
 <p>メソッド名に、protectedまたはprivateを示すためにシングルアンダースコアを使用すべきではありません。</p>
 
-<p>メソッド名またはメソッド名の後ろにスペースを使用してはいけません。
+<p>メソッド名の後ろにスペースを使用してはいけません。
 開き括弧は次の行に記述しなければなりません。また閉じ括弧は本文最後の次の行に記述しなければなりません。
 開き括弧の後ろや、閉じ括弧の前にスペースがあってはいけません。</p>
 
@@ -401,7 +401,7 @@ class ClassName
 
 <h3>4.5. <code>abstract</code>, <code>final</code>, and <code>static</code></h3>
 
-<p>abstractやfinalはアクセス修飾子の前に定義しなければなりません。</p>
+<p>abstractとfinalはアクセス修飾子の前に定義しなければなりません。</p>
 
 <p>staticはアクセス修飾子の後に定義しなければなりません。</p>
 
@@ -425,7 +425,7 @@ abstract class ClassName
 
 <p>メソッドや関数の呼び出し時は、メソッドや関数名と開き括弧の間にスペースがあってはなりません。
 また開き括弧の後や、閉じ括弧の前にスペースがあってもいけません。
-指定する引数リストの前にスペースがあってはなりませんが、各カンマの後に１スペースが必要です。</p>
+引数リストの前にスペースがあってはなりませんが、各カンマの後に１スペースが必要です。</p>
 
 <pre><code>&lt;?php
 bar();
@@ -451,7 +451,7 @@ $foo-&gt;bar(
 <ul>
 <li>制御構造キーワードの後には１スペースを設けなければなりません。</li>
 <li>開き括弧の後にスペースを配置してはなりません。</li>
-<li>制御構造の前にスペースを配置すべきではありません。</li>
+<li>閉じ括弧の前にスペースを配置すべきではありません。</li>
 <li>開き括弧と閉じ中括弧の間にはスペースを挟まなければなりません。</li>
 <li>構造本文は１インデント下げなければなりません。</li>
 <li>閉じ括弧は構造本文の後に改行して配置しなければなりません。</li>
@@ -459,7 +459,7 @@ $foo-&gt;bar(
 
 
 <p>各構造本文は、中括弧で囲わなければなりません。
-これは構造の見え方を標準化し、追加実装等が発生した際のエラーを抑えるます。</p>
+これは構造の見え方を標準化し、追加実装等が発生した際のエラーを抑えます。</p>
 
 <h3>5.1. <code>if</code>, <code>elseif</code>, <code>else</code></h3>
 
@@ -476,7 +476,7 @@ if ($expr1) {
 }
 </code></pre>
 
-<p>判別しやすいようにelse ifは、elseifとするべきです。</p>
+<p>全てのキーワードが１単語に見えるように、else ifではなくelseifを使うべきです。</p>
 
 <h3>5.2. <code>switch</code>, <code>case</code></h3>
 
@@ -515,7 +515,7 @@ while ($expr) {
 }
 </code></pre>
 
-<p>do while文は下記のようになります。
+<p>同様に、do while文は下記のようになります。
 括弧、スペースの位置に注意してください。</p>
 
 <pre><code>&lt;?php
