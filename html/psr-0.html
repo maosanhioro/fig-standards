@@ -16,7 +16,7 @@ blockquote {
     padding: 0;
 }
 body {
-    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-family: "ＭＳ Ｐゴシック",  "MS PGothic",  "ヒラギノ角ゴ Pro W3",  "Hiragino Kaku Gothic Pro", "メイリオ",  "Meiryo",  verdana,   "Osaka",   Sans-Serif;
     font-size: 13px;
     line-height: 18px;
     color: #737373;
@@ -24,15 +24,15 @@ body {
     margin: 10px 13px 10px 13px;
 }
 table {
-	margin: 10px 0 15px 0;
-	border-collapse: collapse;
+  margin: 10px 0 15px 0;
+  border-collapse: collapse;
 }
-td,th {	
-	border: 1px solid #ddd;
-	padding: 3px 10px;
+td,th {
+  border: 1px solid #ddd;
+  padding: 3px 10px;
 }
 th {
-	padding: 5px 10px;	
+  padding: 5px 10px;
 }
 
 a {
@@ -136,20 +136,15 @@ pre code {
     }
 }
 @media print {
-	body,code,pre code,h1,h2,h3,h4,h5,h6 {
-		color: black;
-	}
-	table, pre {
-		page-break-inside: avoid;
-	}
+  body,code,pre code,h1,h2,h3,h4,h5,h6 {
+    color: black;
+  }
+  table, pre {
+    page-break-inside: avoid;
+  }
 }
 </style>
-<title>以下、オートローダー連携のための要件を説明します。
-
-必須要件
----------
-
-* 完全</title>
+<title>PSR-0（日本語）</title>
 
 </head>
 <body>
@@ -161,8 +156,8 @@ pre code {
 <li>完全な名前空間とクラス名のために下記構造としてください。<code>\&lt;ベンダー名&gt;\(&lt;名前空間&gt;\)*&lt;クラス名&gt;</code></li>
 <li>いずれの名前空間もトップレベルの名前空間である「ベンダー名」を持つ必要があります。</li>
 <li>名前空間は複数の自由な名前空間を持つことができます。</li>
-<li>名前空間の区切りは読み込まれる際に、「directory_separator」に変換されます。</li>
-<li>クラス名に含まれるアンダースコア「_」は、「directory_separator」に変換されます。アンダースコアは特別な意味を持ちません。</li>
+<li>名前空間の区切りは読み込まれる際に、「DIRECTORY_SEPARATOR」に変換されます。</li>
+<li>クラス名に含まれるアンダースコア「_」は、「DIRECTORY_SEPARATOR」に変換されます。アンダースコアは特別な意味を持ちません。</li>
 <li>名前空間とクラス名に「.php」をつけて完全なファイルとなり読み込まれます。</li>
 <li>ベンダー名、名前空間及びクラス名のアルファベット文字列における小文字・大文字の組み合わせは自由です。</li>
 </ul>
