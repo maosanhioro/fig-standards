@@ -1,6 +1,6 @@
 以下、オートローダー連携のための要件を説明します。
 
-必須要件
+必須要件 [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md#mandatory)
 ---------
 
 * 完全な名前空間とクラス名のために下記構造としてください。`\<ベンダー名>\(<名前空間>\)*<クラス名>`
@@ -11,7 +11,7 @@
 * 名前空間とクラス名に「.php」をつけて完全なファイルとなり読み込まれます。
 * ベンダー名、名前空間及びクラス名のアルファベット文字列における小文字・大文字の組み合わせは自由です。
 
-例
+例 [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md#examples)
 --------
 
 * `\Doctrine\Common\IsolatedClassLoader` => `/path/to/project/lib/vendor/Doctrine/Common/IsolatedClassLoader.php`
@@ -19,7 +19,7 @@
 * `\Zend\Acl` => `/path/to/project/lib/vendor/Zend/Acl.php`
 * `\Zend\Mail\Message` => `/path/to/project/lib/vendor/Zend/Mail/Message.php`
 
-名前空間及びクラス名におけるアンダースコアの扱い
+名前空間及びクラス名におけるアンダースコアの扱い [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md#underscores-in-namespaces-and-class-names)
 -----------------------------------------
 
 * `\namespace\package\Class_Name` => `/path/to/project/lib/vendor/namespace/package/Class/Name.php`
@@ -28,7 +28,7 @@
 ここでは余計な混乱を防ぐための最低限のオートローダー連携基準を示します。
 下記のPHP 5.3上におけるSplClassLoader実装例により、これらの基準を確認することができます。
 
-実装例
+実装例 [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md#example-implementation)
 ----------------------
 
 以下は、上記基準に従ったクラスのオートロードにおける振る舞いを確認するための例です。
@@ -52,7 +52,7 @@ function autoload($className)
 }
 ```
 
-SplClassLoader実装について
+SplClassLoader実装について [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md#splclassloader-implementation)
 -----------------------------
 
 以下のgistで、上記のオートローダー互換運用を満たした上で実装クラスがロードされるというSplClassLoaderの簡単な実装例を示します。

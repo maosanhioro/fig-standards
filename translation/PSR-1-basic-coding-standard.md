@@ -1,4 +1,4 @@
-基本コーディング規約
+基本コーディング規約 [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md#basic-coding-standard)
 =====================
 
 この規約セクションでは、共有されるPHPコードにおいて高い技術レベルでの連携を確保するために必要とされる標準的なコーディング要素を考慮したうえで構成されています。
@@ -9,7 +9,7 @@
 [PSR-0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
 
 
-1. 概要
+1. 概要 [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md#1-overview)
 -----------
 
 - PHPコードは「<?php」及び 「<?=」タグを使用しなければなりません。
@@ -27,18 +27,18 @@
 - メソッド名はcamelCase記法で定義しなければなりません。
 
 
-2. ファイル
+2. ファイル [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md#2-files)
 --------
 
-### 2.1. PHPタグ
+### 2.1. PHPタグ [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md#21-php-tags)
 
 PHPコードは「<?php ?>」または短縮記述の「<?= ?>」を使用しなければなりません。それ以外のタグを使用してはいけません。
 
-### 2.2. 文字コード
+### 2.2. 文字コード [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md#22-character-encoding)
 
 文字コードは、UTF-8（BOM無し）でなければなりません。
 
-### 2.3. 副作用
+### 2.3. 副作用 [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md#23-side-effects)
 
 新たなシンボル（クラス、関数、定数など）を宣言するためのファイルと、副作用のある処理を行うためのファイルは、分けるべきです。一つのファイルの中で両方を行うべきではありません。
 
@@ -88,7 +88,7 @@ if (! function_exists('bar')) {
 ```
 
 
-3. 名前空間とクラス名
+3. 名前空間とクラス名 [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md#3-namespace-and-class-names)
 ----------------------------
 
 [PSR-0][]に準拠しなければなりません。
@@ -121,12 +121,12 @@ class Vendor_Model_Foo
 }
 ```
 
-4. クラス定数、プロパティ及びメソッドについて
+4. クラス定数、プロパティ及びメソッドについて [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md#4-class-constants-properties-and-methods)
 -------------------------------------------
 
 ここでのクラスは、全ての一般クラス、インターフェイス、traitを含みます。
 
-### 4.1. 定数
+### 4.1. 定数 [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md#41-constants)
 
 クラス定数は総じてアンダースコア文字を区切り文字として大文字で定義しなければなりません。
 例:
@@ -142,13 +142,13 @@ class Foo
 }
 ```
 
-### 4.2. プロパティ
+### 4.2. プロパティ [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md#42-properties)
 
 このガイドでは、プロパティの命名規則として特定のスタイル（$StudlyCaps、$camelCase、$under_scoreなど）を推奨することはしません。
 
 どのような命名規則を使用するにせよ、適切なスコープ内において一貫性を持たせるべきです。
 ここでのスコープは、ベンダーレベル、パッケージレベル、クラスレベルまたはメソッドレベルを指します。
 
-### 4.3. Methods
+### 4.3. Methods [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md#43-methods)
 
 メソッド名はcamelCase記法で定義しなければなりません。
