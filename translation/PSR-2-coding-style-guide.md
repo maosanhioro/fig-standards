@@ -1,4 +1,4 @@
-コーディングガイド
+コーディングガイド [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md#coding-style-guide)
 ==================
 
 このガイドは[PSR-1][]に準拠し、標準的なコーディング規約のためのスタイルガイドです。
@@ -17,7 +17,7 @@
 [PSR-1]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md
 
 
-1. 概要
+1. 概要 [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md#1-overview)
 -----------
 
 - [PSR-1][]に準拠しなければなりません。
@@ -40,7 +40,7 @@
 
 - 制御構造の開始前にスペースがあってはいけません。また閉じる際もその前にスペースがあってはいけません。
 
-### 1.1. 例
+### 1.1. 例 [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md#11-example)
 
 以下は、概要内容を適用した例です。
 
@@ -72,14 +72,14 @@ class Foo extends Bar implements FooInterface
 }
 ```
 
-2. 一般
+2. 一般 [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md#2-general)
 ----------
 
-### 2.1 標準的なコーディング規約
+### 2.1 標準的なコーディング規約 [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md#21-basic-coding-standard)
 
 [PSR-1][]に準拠しなければなりません。
 
-### 2.2 ファイル
+### 2.2 ファイル [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md#22-files)
 
 全てのPHPファイルの改行コードは、LFでなければなりません。
 
@@ -87,7 +87,7 @@ class Foo extends Bar implements FooInterface
 
 PHPだけが書かれたファイルについては、終了タグ「?>」を省略しなければなりません。
 
-### 2.3. 行
+### 2.3. 行 [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md#23-lines)
 
 行の長さに対してハードリミットがあってはいけません。
 
@@ -102,14 +102,14 @@ PHPだけが書かれたファイルについては、終了タグ「?>」を省
 
 １行に複数のステートメントがあってはいけません。
 
-### 2.4. インデント
+### 2.4. インデント [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md#24-indenting)
 
 インデントは４つのスペースとしなければなりません。タブによるインデントは用いてはなりません。
 
 > 注意：スペースとタブを混在せず、スペースのみとすることにより差分表示やパッチ、履歴や注釈がずれる問題を回避できます。
 > スペースのみを使うことで、微妙なサブインデントの位置合わせを容易とすることができます。
 
-### 2.5. 予約語とTrue/False/Null
+### 2.5. 予約語とTrue/False/Null [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md#25-keywords-and-truefalsenull)
 
 PHPの[予約語][]は小文字で使用しなければなりません。
 
@@ -119,7 +119,7 @@ PHP定数であるtrue、falseそしてnullは小文字でなければなりま�
 
 
 
-3. 名前空間とuse演算子による定義
+3. 名前空間とuse演算子による定義 [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md#3-namespace-and-use-declarations)
 ---------------------------------
 
 名前空間の定義の後に空行が必要です。
@@ -145,12 +145,12 @@ use OtherVendor\OtherPackage\BazClass;
 ```
 
 
-4. クラス、プロパティ及びメソッド
+4. クラス、プロパティ及びメソッド [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md#4-classes-properties-and-methods)
 -----------------------------------
 
 ここでのクラスは、全ての一般クラス、インターフェイス、traitを含みます。
 
-### 4.1. ExtendsとImplements
+### 4.1. ExtendsとImplements [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md#41-extends-and-implements)
 
 extendsとimplementsは、クラス名と同じ行で定義されなけれなりません。
 
@@ -190,7 +190,7 @@ class ClassName extends ParentClass implements
 }
 ```
 
-### 4.2. プロパティ
+### 4.2. プロパティ [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md#42-properties)
 
 アクセス修飾子は、全てのプロパティに定義しなければなりません。
 
@@ -212,7 +212,7 @@ class ClassName
 }
 ```
 
-### 4.3. メソッド
+### 4.3. メソッド [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md#43-methods)
 
 アクセス修飾子は、全てのメソッドに定義しなければなりません。
 
@@ -238,7 +238,7 @@ class ClassName
 }
 ```
 
-### 4.4. メソッドの引数
+### 4.4. メソッドの引数 [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md#44-method-arguments)
 
 引数リストでは、それぞれのカンマの前にスペースがあってはいけません。
 また各カンマの後ろには１スペースおかなければなりません。
@@ -279,7 +279,7 @@ class ClassName
 }
 ```
 
-### 4.5. `abstract`, `final`, and `static`
+### 4.5. `abstract`, `final`, and `static` [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md#45-abstract-final-and-static)
 
 abstractとfinalはアクセス修飾子の前に定義しなければなりません。
 
@@ -302,7 +302,7 @@ abstract class ClassName
 }
 ```
 
-### 4.6. メソッド及び関数の呼び出し
+### 4.6. メソッド及び関数の呼び出し [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md#46-method-and-function-calls)
 
 メソッドや関数の呼び出し時は、メソッドや関数名と開き括弧の間にスペースがあってはなりません。
 また開き括弧の後や、閉じ括弧の前にスペースがあってもいけません。
@@ -327,7 +327,7 @@ $foo->bar(
 );
 ```
 
-5. 制御構造
+5. 制御構造 [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md#5-control-structures)
 ---------------------
 
 制御構造の一般的なスタイルルールや下記の通りです。
@@ -343,7 +343,7 @@ $foo->bar(
 これは構造の見え方を標準化し、追加実装等が発生した際のエラーを抑えます。
 
 
-### 5.1. `if`, `elseif`, `else`
+### 5.1. `if`, `elseif`, `else` [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md#51-if-elseif-else)
 
 if制御について例えば下記のようになります。
 括弧、スペースの位置に注意してください。elseやelseifの前後括弧は同じ行に配置されます。
@@ -362,7 +362,7 @@ if ($expr1) {
 全てのキーワードが１単語に見えるように、else ifではなくelseifを使うべきです。
 
 
-### 5.2. `switch`, `case`
+### 5.2. `switch`, `case` [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md#52-switch-case)
 
 switch制御は下記のようになります。
 括弧、スペースの位置に注意してください。
@@ -391,7 +391,7 @@ switch ($expr) {
 ```
 
 
-### 5.3. `while`, `do while`
+### 5.3. `while`, `do while` [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md#53-while-do-while)
 
 while文は下記のようになります。
 括弧、スペースの位置に注意してください。
@@ -413,7 +413,7 @@ do {
 } while ($expr);
 ```
 
-### 5.4. `for`
+### 5.4. `for` [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md#54-for)
 
 for文は下記のようになります。
 括弧、スペースの位置に注意してください。
@@ -425,7 +425,7 @@ for ($i = 0; $i < 10; $i++) {
 }
 ```
 
-### 5.5. `foreach`
+### 5.5. `foreach` [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md#55-foreach)
 
 foreach文は下記のようになります。
 括弧、スペースの位置に注意してください。
@@ -437,7 +437,7 @@ foreach ($iterable as $key => $value) {
 }
 ```
 
-### 5.6. `try`, `catch`
+### 5.6. `try`, `catch` [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md#56-try-catch)
 
 try catch文は下記のようになります。
 括弧、スペースの位置に注意してください。
@@ -453,7 +453,7 @@ try {
 }
 ```
 
-6. `Closure`
+6. `Closure` [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md#6-closures)
 -----------
 
 クロージャは、functionキーワードの後にスペースを、useキーワードの前後にスペースが必要です。
@@ -550,7 +550,7 @@ $foo->bar(
 ```
 
 
-7. その他
+7. その他 [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md#7-conclusion)
 --------------
 
 本スタイルガイドでは、意図的に省略しているスタイルやプラクティスが多くあります。
@@ -573,13 +573,13 @@ $foo->bar(
 なお、本スタイルガイドは将来的に様々なスタイルやプラクティスの登場に応じて改定・拡張をできるものとします。
 
 
-付録A 調査（未翻訳）
+付録A 調査（未翻訳） [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md#appendix-a-survey)
 ------------------
 
 本スタイルガイドを書くにあたって、参加プロジェクトに対する実体調査を実施することで、共通プラクティスを導き出しました。
 調査結果をここに残します。
 
-### A.1. Survey Data
+### A.1. Survey Data [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md#a1-survey-data)
 
     url,http://www.horde.org/apps/horde/docs/CODING_STANDARDS,http://pear.php.net/manual/en/standards.php,http://solarphp.com/manual/appendix-standards.style,http://framework.zend.com/manual/en/coding-standard.html,http://symfony.com/doc/2.0/contributing/code/standards.html,http://www.ppi.io/docs/coding-standards.html,https://github.com/ezsystems/ezp-next/wiki/codingstandards,http://book.cakephp.org/2.0/en/contributing/cakephp-coding-conventions.html,https://github.com/UnionOfRAD/lithium/wiki/Spec%3A-Coding,http://drupal.org/coding-standards,http://code.google.com/p/sabredav/,http://area51.phpbb.com/docs/31x/coding-guidelines.html,https://docs.google.com/a/zikula.org/document/edit?authkey=CPCU0Us&hgd=1&id=1fcqb93Sn-hR9c0mkN6m_tyWnmEvoswKBtSc0tKkZmJA,http://www.chisimba.com,n/a,https://github.com/Respect/project-info/blob/master/coding-standards-sample.php,n/a,Object Calisthenics for PHP,http://doc.nette.org/en/coding-standard,http://flow3.typo3.org,https://github.com/propelorm/Propel2/wiki/Coding-Standards,http://developer.joomla.org/coding-standards.html
     voting,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,no,no,no,?,yes,no,yes
@@ -605,7 +605,7 @@ $foo->bar(
     blank_line_after_php,no,no,no,no,yes,no,no,no,no,yes,yes,no,no,yes,?,yes,yes,no,yes,no,yes,no
     class_method_control_brace,next/next/same,next/next/same,next/next/same,next/next/same,next/next/same,same/same/same,next/next/next,same/same/same,same/same/same,same/same/same,same/same/same,next/next/next,next/next/same,next/same/same,next/next/next,next/next/same,next/next/same,next/next/same,next/next/same,same/same/same,next/next/same,next/next/next
 
-### A.2. Survey Legend
+### A.2. Survey Legend [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md#a2-survey-legend)
 
 `indent_type`:
 The type of indenting. `tab` = "Use a tab", `2` or `4` = "number of spaces"
@@ -670,7 +670,7 @@ Is there a blank line after the opening PHP tag?
 `class_method_control_brace`:
 A summary of what line the opening braces go on for classes, methods, and control structures.
 
-### A.3. Survey Results
+### A.3. Survey Results [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md#a3-survey-results)
 
     indent_type:
         tab: 7
