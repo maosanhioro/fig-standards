@@ -6,9 +6,9 @@
 * 完全な名前空間とクラス名のために下記構造としてください。`\<ベンダー名>\(<名前空間>\)*<クラス名>`
 * いずれの名前空間もトップレベルの名前空間である「ベンダー名」を持つ必要があります。
 * 名前空間は複数の自由な名前空間を持つことができます。
-* 名前空間の区切りは読み込まれる際に、「DIRECTORY_SEPARATOR」に変換されます。
-* クラス名に含まれるアンダースコア「\_」は、「DIRECTORY_SEPARATOR」に変換されます。アンダースコアは特別な意味を持ちません。
-* 名前空間とクラス名に「.php」をつけて完全なファイルとなり読み込まれます。
+* 名前空間の区切りは読み込まれる際に、`DIRECTORY_SEPARATOR`に変換されます。
+* クラス名に含まれるアンダースコア`_`は、`DIRECTORY_SEPARATOR`に変換されます。アンダースコアは特別な意味を持ちません。
+* 名前空間とクラス名に`.php`をつけて完全なファイルとなり読み込まれます。
 * ベンダー名、名前空間及びクラス名のアルファベット文字列における小文字・大文字の組み合わせは自由です。
 
 例 [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md#examples)
@@ -41,7 +41,7 @@ function autoload($className)
     $className = ltrim($className, '\\');
     $fileName  = '';
     $namespace = '';
-    if ($lastNsPos = strripos($className, '\\')) {
+    if ($lastNsPos = strrpos($className, '\\')) {
         $namespace = substr($className, 0, $lastNsPos);
         $className = substr($className, $lastNsPos + 1);
         $fileName  = str_replace('\\', DIRECTORY_SEPARATOR, $namespace) . DIRECTORY_SEPARATOR;
