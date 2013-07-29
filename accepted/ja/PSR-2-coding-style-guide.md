@@ -10,7 +10,7 @@
 様々な作者が複数プロジェクトを横断して協力しあうことで、全てのプロジェクトで有用なガイドライン策定の助けとなります。
 従って、このガイド本来の利点はルール自体にはなく、ルールを共有することにあります。
 
-文書内記載されている "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY" 及び "OPTIONAL" は、[RFC 2119][]で説明される趣旨で解釈してください。
+原文書内で記載されている "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY" 及び "OPTIONAL" は、[RFC 2119][]で説明される趣旨で解釈してください。
 
 [RFC 2119]: http://www.ietf.org/rfc/rfc2119.txt
 [PSR-0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
@@ -148,7 +148,7 @@ use OtherVendor\OtherPackage\BazClass;
 4. クラス、プロパティ及びメソッド [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md#4-classes-properties-and-methods)
 -----------------------------------
 
-ここでのクラスは、全ての一般クラス、インターフェイス、traitを含みます。
+ここでのクラスは、全ての一般クラス、インターフェイス、トレイトを含みます。
 
 ### 4.1. ExtendsとImplements [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md#41-extends-and-implements)
 

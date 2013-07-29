@@ -5,9 +5,9 @@
 
 主な目標は、ライブラリで`Psr\Log\LoggerInterface`オブジェクトを受け、シンプルかつ普遍的にログを書き込めるようにすることです。カスタマイズ需要のあるフレームワークやCMSは、それぞれの目的にあったインターフェイスを拡張をすることができますが、本文書との互換性を維持すべきです。これによりサードパーティのライブラリが、アプリケーションログを集約的に書き込めることを保証することになります。
 
-文書（原文）内で記載されている "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY" 及び "OPTIONAL" は、[RFC 2119][]で説明される趣旨で解釈してください。
+原文書内で記載されている "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY" 及び "OPTIONAL" は、[RFC 2119][]で説明される趣旨で解釈してください。
 
-文書（原文）内で記載されている`implementor`は、ライブラリやフレームワークにおいてログに関する`LoggerInterface`を実装した開発者、と解釈してください。
+原文書内で記載されている`implementor`は、ライブラリやフレームワークにおいてログに関する`LoggerInterface`を実装した開発者、と解釈してください。
 対して`user`は、ロガー利用者を指します。
 
 [RFC 2119]: http://tools.ietf.org/html/rfc2119

@@ -3,7 +3,7 @@
 
 この規約セクションでは、共有されるPHPコードにおいて高い技術レベルでの連携を確保するために必要とされる標準的なコーディング要素を考慮したうえで構成されています。
 
-文書内記載されている "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY" 及び "OPTIONAL" は、[RFC 2119][]で説明される趣旨で解釈してください。
+原文書内で記載されている "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY" 及び "OPTIONAL" は、[RFC 2119][]で説明される趣旨で解釈してください。
 
 [RFC 2119]: http://www.ietf.org/rfc/rfc2119.txt
 [PSR-0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
@@ -124,7 +124,7 @@ class Vendor_Model_Foo
 4. クラス定数、プロパティ及びメソッドについて [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md#4-class-constants-properties-and-methods)
 -------------------------------------------
 
-ここでのクラスは、全ての一般クラス、インターフェイス、traitを含みます。
+ここでのクラスは、全ての一般クラス、インターフェイス、トレイトを含みます。
 
 ### 4.1. 定数 [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md#41-constants)
 
