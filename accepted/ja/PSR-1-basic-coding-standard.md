@@ -3,10 +3,11 @@
 
 この規約セクションでは、共有されるPHPコードにおいて高い技術レベルでの連携を確保するために必要とされる標準的なコーディング要素を考慮したうえで構成されています。
 
-原文書内で記載されている "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY" 及び "OPTIONAL" は、[RFC 2119][]で説明される趣旨で解釈してください。
+原文書内で記載されている "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY" 及び "OPTIONAL" は、[RFC 2119]で説明される趣旨で解釈してください。
 
 [RFC 2119]: http://www.ietf.org/rfc/rfc2119.txt
 [PSR-0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
+[PSR-4]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md
 
 
 1. 概要 [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md#1-overview)
@@ -18,7 +19,7 @@
 
 - シンボル（クラス、関数、定数など）を宣言するためのファイルと、副作用のある処理（出力の生成、ini設定の変更など）を行うためのファイルは、分けるべきです。
 
-- 名前空間、クラスについては[PSR-0][]に準拠しなければなりません。
+- 名前空間とクラスは「オートロード」のPSR [[PSR-0], [PSR-4]]に準拠しなければなりません。
 
 - クラス名は、StudlyCaps（単語の先頭文字を大文字で表記する記法）記法で定義しなければなりません。
 
@@ -91,7 +92,7 @@ if (! function_exists('bar')) {
 3. 名前空間とクラス名 [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md#3-namespace-and-class-names)
 ----------------------------
 
-[PSR-0][]に準拠しなければなりません。
+名前空間とクラスは「オートロード」のPSR [[PSR-0], [PSR-4]]に準拠しなければなりません。
 
 各クラスが、（トップレベルのベンダー名のように）少なくとも１レベルの名前空間となります。
 
