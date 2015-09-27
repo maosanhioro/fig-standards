@@ -1,7 +1,7 @@
 コーディングガイド [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md#coding-style-guide)
 ==================
 
-このガイドは[PSR-1][]に準拠し、標準的なコーディング規約のためのスタイルガイドです。
+このガイドは[PSR-1]に準拠し、標準的なコーディング規約のためのスタイルガイドです。
 
 このガイドの目的は、複数メンバーがコードを読む際の認識のずれを抑えることです。
 これはPHPコードをどのような書式にするかについて、ルールや期待値を共有することで実現します。
@@ -10,7 +10,7 @@
 様々な作者が複数プロジェクトを横断して協力しあうことで、全てのプロジェクトで有用なガイドライン策定の助けとなります。
 従って、このガイド本来の利点はルール自体にはなく、ルールを共有することにあります。
 
-原文書内で記載されている "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY" 及び "OPTIONAL" は、[RFC 2119][]で説明される趣旨で解釈してください。
+原文書内で記載されている "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY" 及び "OPTIONAL" は、[RFC 2119]で説明される趣旨で解釈してください。
 
 [RFC 2119]: http://www.ietf.org/rfc/rfc2119.txt
 [PSR-0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
@@ -21,6 +21,7 @@
 -----------
 
 - [PSR-1][]に準拠しなければなりません。
+- 「基本コーディング規約」のPSR [[PSR-1]]に準拠しなければなりません。
 
 - インデントには４つのスペースを使用し、タブは使用してはいけません。
 
@@ -77,7 +78,7 @@ class Foo extends Bar implements FooInterface
 
 ### 2.1 標準的なコーディング規約 [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md#21-basic-coding-standard)
 
-[PSR-1][]に準拠しなければなりません。
+[PSR-1]に準拠しなければなりません。
 
 ### 2.2 ファイル [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md#22-files)
 
@@ -111,7 +112,7 @@ PHPだけが書かれたファイルについては、終了タグ「?>」を省
 
 ### 2.5. 予約語とTrue/False/Null [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md#25-keywords-and-truefalsenull)
 
-PHPの[予約語][]は小文字で使用しなければなりません。
+PHPの[予約語]は小文字で使用しなければなりません。
 
 PHP定数であるtrue、falseそしてnullは小文字でなければなりません。
 
