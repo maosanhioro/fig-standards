@@ -1,3 +1,10 @@
+オートロード規約
+====================
+
+> **Deprecated** - 2014年10月21日をもってPSR-0は非推奨となりました。現在は[PSR-4]が代替として推奨されています。
+
+[PSR-4]: http://www.php-fig.org/psr/psr-4/
+
 以下、オートローダー連携のための要件を説明します。
 
 必須要件 [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md#mandatory)
@@ -50,6 +57,7 @@ function autoload($className)
 
     require $fileName;
 }
+spl_autoload_register('autoload');
 ```
 
 SplClassLoader実装について [原文](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md#splclassloader-implementation)
